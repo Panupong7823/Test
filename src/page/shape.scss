@@ -1,0 +1,174 @@
+html,
+body,
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(100deg, #6eda78, #ffa200);
+
+  &-header,
+  &-footer {
+    color: #16310c;
+    padding: 20px;
+    text-align: center;
+
+    .header-row {
+      width: 100%;
+    }
+
+    .layout-text {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .language-select {
+      font-size: 16px; 
+    }
+  }
+
+  &-body {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+
+ 
+    $button-size: 190px; 
+    $shape-color: #7b7b7b;
+    $hover-color: #ffffff;
+
+  
+    .button-shape {
+      border-radius: 5px; 
+      width: $button-size;
+      height: $button-size / 2;
+      position: relative;
+      overflow: hidden; 
+      border: none; 
+
+      &:hover {
+        background-color: #fea200;
+      }
+      &:hover .shape {
+        background-color: #ffffff; 
+      }
+    }
+    .buttons-shape {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $button-size * 2;
+      height: $button-size / 2;
+
+      .left-content {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+      }
+
+      .right-content {
+        position: absolute;
+        top: 50%;
+        right: 70%;
+      }
+      &:hover {
+        background-color: #fea200;
+      }
+      &:hover .shape {
+        background-color: #ffffff;
+      }
+    }
+
+ 
+    .shape {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rectangle {
+      width: 80%;
+      height: 60%;
+      background-color: $shape-color; 
+    }
+
+
+    .circle {
+      width: 32%;
+      height: 60%;
+      background-color: $shape-color; 
+      border-radius: 100%; 
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid $shape-color; 
+    }
+    .triangle-down {
+      width: 0;
+      height: 0;
+      border-right: 30px solid transparent; 
+      border-left: 30px solid transparent;
+      border-top: 50px solid $shape-color; 
+    }
+    .triangle-right {
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 50px solid $shape-color; 
+      position: absolute;
+      top: 50%;
+    }
+    .triangle-left {
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-right: 50px solid $shape-color; 
+      position: absolute;
+      top: 50%;
+    }
+
+    .trapezoid {
+      width: 60%;
+      height: 60%; 
+      background-color: $shape-color; 
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    .square {
+      width: 30%;
+      height: 50%;
+      background-color: $shape-color; 
+    }
+    .oval {
+      width: 70%;
+      height: 70%;
+      background-color: $shape-color; 
+      border-radius: 100px / 50px;
+    }
+    .parallelogram {
+      width: 70%;
+      height: 50%;
+      background-color: $shape-color; 
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%) skew(20deg);
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+}

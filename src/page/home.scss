@@ -1,0 +1,47 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(100deg, #6eda78, #ffa200);
+
+  &-header,
+  &-footer {
+    color: #16310c;
+    padding: 20px;
+    text-align: center;
+
+    .header-row {
+      width: 100%;
+    }
+
+    .layout-text {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .language-select {
+      font-size: 16px;
+    }
+  }
+
+  &-body {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+
+    .homeContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .customButton {
+      margin-right: 16px;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
